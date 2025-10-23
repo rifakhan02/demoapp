@@ -64,7 +64,6 @@ const Hero: React.FC = () => {
         <SplineScene />
 
       </div>
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.85/build/spline-viewer.js"></script>
     </div>
   );
 };
