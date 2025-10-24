@@ -49,7 +49,7 @@ body {
     padding: 0 2rem;
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
 }
 
 /* HEADER */
@@ -440,3 +440,17 @@ main {
     height:100%;
   }
 }
+
+/* LAPTOP MEDIA QUERY */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1441px) {
+  .container {
+    height: 100vh; /* Keep default height for large desktops */
+  }
+}
+
