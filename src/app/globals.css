@@ -414,7 +414,7 @@ main {
 @media (width: 375px) and (height: 667px) {
   /* Your styles here */
   .container{
-    height: 145vh;
+    height: 100%;
   }
 }
 
@@ -426,7 +426,7 @@ main {
     height: 65vh;
   }
   .container{
-    height:130vh;
+    height:100%;
   }
 }
 
@@ -437,6 +437,6 @@ main {
     height: 70vh;
   }
   .container{
-    height:120vh;
+    height:100%;
   }
 }
