@@ -1,0 +1,101 @@
+/* -------------------------------
+   Education Section Container
+---------------------------------*/
+.education-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: black;
+  color: #e7e7e7;
+}
+
+.education-heading {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* -------------------------------
+   Education Boxes Container
+---------------------------------*/
+.education-container {
+  display: flex;
+  flex-direction: row;      /* horizontal on desktop */
+  justify-content: center;
+  gap: 2rem;                /* space between boxes */
+  flex-wrap: wrap;           /* wrap on smaller screens */
+}
+
+/* -------------------------------
+   Individual Education Box (Gradient Border)
+---------------------------------*/
+.education-box {
+  position: relative;
+  width: 250px;
+  padding: 2px;                        /* outer gradient border */
+  border-radius: 12px;
+  background: linear-gradient(90deg, #656565, #7f42a7, #6600c5, #5300a0, #757575);
+  background-size: 200%;
+  animation: gradientAnimation 2.5s linear infinite;
+  cursor: default;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;               /* include padding in width/height */
+}
+
+/* Inner Box Content */
+.education-box > div {
+  background-color: black;               /* content background */
+  border-radius: 10px;                   /* slightly smaller than outer */
+  padding: 1.5rem;
+  text-align: center;
+  color: #e7e7e7;
+  height: 100%;                          /* fill outer box */
+  box-sizing: border-box;
+  margin: 0;                              /* remove extra margin */
+}
+
+/* -------------------------------
+   Text Styling
+---------------------------------*/
+.education-box h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.education-box .college {
+  font-size: 1rem;
+  color: #a7a7a7;
+  margin-bottom: 0.5rem;
+}
+
+.education-box p {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  color: gray;
+  font-weight: 500;
+}
+
+/* Hover Effect */
+.education-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(128, 0, 255, 0.3);
+}
+
+/* -------------------------------
+   Gradient Animation
+---------------------------------*/
+@keyframes gradientAnimation {
+  to {
+    background-position: 200%;
+  }
+}
+
+/* -------------------------------
+   Mobile Responsiveness
+---------------------------------*/
+@media (max-width: 768px) {
+  .education-container {
+    flex-direction: column;   /* stack boxes vertically */
+    align-items: center;
+    gap: 1.5rem;
+  }
+}

@@ -10,17 +10,20 @@ const Hero: React.FC = () => {
       <div className="layer-blur"></div>
 
       <div className="container">
-        <header>
+        <header data-aos="fade-down" data-aos-duration="1500">
           <h1 className="logo">𝕽𝖎𝖋𝖆</h1>
           <nav>
-            <a href="#">About</a>
-            <a href="#">Education</a>
-            <a href="#">Skills</a>
-            <a href="#">Certificates</a>
-            <a href="#">Projects</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#projects">Projects</a>
           </nav>
-          <button className="btn-signing">Connect</button>
+
+          <a href="#contact" className="btn-signing-main">Connect</a>
         </header>
+
+        <hr className="border-gray-800 opacity-80" />
 
         <main>
           <div className="box">
@@ -50,7 +53,7 @@ const Hero: React.FC = () => {
               </p>
 
               <div className="buttons">
-                <a href="#" className="btn-get-started">
+                <a href="#contact" className="btn-get-started">
                   Hire Me
                 </a>
                 <a href="#" className="btn-signing-main">

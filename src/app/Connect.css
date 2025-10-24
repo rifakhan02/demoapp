@@ -1,0 +1,122 @@
+.connect-section {
+  padding: 4rem 2rem;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+}
+
+.connect-heading {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Icons */
+.connect-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565);
+  background-size: 200%;
+  animation: gradientAnimation 3s linear infinite;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: #fff;
+}
+
+.icon-box:hover {
+  transform: scale(1.2);
+  color: #ffffff;
+}
+
+.icon-box svg {
+  z-index: 2;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* Form */
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.connect-form input,
+.connect-form textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 2px solid #7f42a7;
+  background-color: #1a1a1a;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.connect-form input:focus,
+.connect-form textarea:focus {
+  border-color: #b87aff;
+}
+
+.send-btn {
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(90deg, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565) border-box;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1rem;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.send-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(black, black) padding-box, 
+              linear-gradient(90deg, #757575, #5300a0, #6600c5, #7f42a7, #656565, #757575) border-box;
+}
+
+.success-msg {
+  color: #b87aff;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .connect-icons {
+    gap: 1.2rem;
+  }
+
+  .icon-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .connect-form {
+    gap: 1rem;
+  }
+
+  .send-btn {
+    width: 100%;
+    padding: 0.7rem 1rem;
+  }
+}

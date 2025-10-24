@@ -1,0 +1,192 @@
+.certificates-section {
+  padding: 4rem 1rem;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+}
+
+.certificates-heading {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Container for box + arrows */
+.certificate-container {
+  position: relative; /* for absolute arrows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 250px; /* same as box height to align arrows vertically */
+}
+
+/* Certificate box */
+.certificate-box {
+  position: relative;
+  z-index: 1;
+  width: 420px;       /* fixed width */
+  height: 250px;      /* fixed height */
+  border-radius: 15px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: black;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.certificate-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Gradient border like tag-box */
+.certificate-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px; /* border thickness */
+  background: linear-gradient(
+    90deg,
+    #656565,
+    #7f42a7,
+    #6600c5,
+    #5300a0,
+    #757575,
+    #656565
+  );
+  background-size: 200%;
+  animation: gradientAnimation 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* Certificate name */
+.certificate-name {
+  color: #b87aff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  z-index: 2;
+  margin-bottom: 1.5rem;
+}
+
+/* Rounded View button with gradient border */
+.view-btn {
+  position: relative;
+  padding: 0.6rem 1.6rem;
+  background-color: black; /* inner color */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  z-index: 2;
+  overflow: hidden;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Gradient border for button */
+.view-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: 25px;
+  background: linear-gradient(
+    90deg,
+    #656565,
+    #7f42a7,
+    #6600c5,
+    #5300a0,
+    #757575,
+    #656565
+  );
+  background-size: 200%;
+  animation: gradientAnimation 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1; /* behind button text */
+}
+
+.view-btn:hover {
+  color: black;
+  transform: scale(1.05);
+  background-color: #d0a9ff; /* optional inner color change */
+}
+
+/* Arrow buttons */
+.arrow-btn {
+  background-color: transparent;
+  border: 2px solid #b87aff;
+  color: #b87aff;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #b87aff;
+  color: #000000;
+}
+
+/* Position arrows left and right of box */
+.arrow-btn.left {
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-btn.right {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .certificate-container {
+    height: 220px; /* adjust container height for smaller box */
+    flex-direction: row; /* keep arrows left/right */
+  }
+
+  .certificate-box {
+    width: 300px;
+    height: 200px;
+    padding: 1.5rem 2rem;
+  }
+
+  .arrow-btn.left {
+    left: -10px;
+    z-index: 10;
+  }
+
+  .arrow-btn.right {
+    right: -10px;
+    z-index: 10;
+  }
+
+  .arrow-btn {
+    font-size: 1rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
