@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
 import '@/app/Footer.css'
 
 const Footer = () => {
