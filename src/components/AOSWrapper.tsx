@@ -13,7 +13,7 @@ const AOSWrapper: React.FC<Props> = ({ children }) => {
     AOS.init({
       duration: 800, // animation duration in ms
       once: true,    // whether animation should happen only once while scrolling
-      easing: 'ease-in-out', 
+      easing: 'ease-in-out',
     });
   }, []);
 

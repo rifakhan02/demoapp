@@ -3,7 +3,6 @@ import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import SplineScene from './SplineScene';
 
-
 const Hero: React.FC = () => {
   return (
     <div>
@@ -28,11 +27,19 @@ const Hero: React.FC = () => {
         <main>
           <div className="box">
             <div className="content">
-              <div className="tag-box">
+
+              {/* Portfolio tag */}
+              <div className="tag-box" data-aos="fade-up" data-aos-duration="1000">
                 <div className="tag">Portfolio</div>
               </div>
 
-              <div className="typewriter-container">
+              {/* Typewriter */}
+              <div
+                className="typewriter-container"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-delay="200"
+              >
                 <h1>
                   <Typewriter
                     words={['Hi, I’m AZKIYA RIFA KHAN', 'Full Stack Developer']}
@@ -46,24 +53,43 @@ const Hero: React.FC = () => {
                 </h1>
               </div>
 
-
-              <p className="description">
+              {/* Description */}
+              <p
+                className="description"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-delay="400"
+              >
                 A passionate problem solver and quick learner.
                 Crafting seamless digital experiences through design and logic
               </p>
 
-              <div className="buttons">
+              {/* Buttons */}
+              <div
+                className="buttons"
+                data-aos="fade-up"
+                data-aos-duration="1200"
+                data-aos-delay="100"
+              >
                 <a href="#contact" className="btn-get-started">
                   Hire Me
                 </a>
-                <a href="#" className="btn-signing-main">
+                <a
+                  href="https://drive.google.com/file/d/1eGWH_IOwEQ6xIlCH4f_3Ra8Au-B5FZjq/view?usp=drivesdk"
+                  className="btn-signing-main"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Resume
                 </a>
+
               </div>
+
             </div>
           </div>
         </main>
 
+        {/* SplineScene stays untouched */}
         <SplineScene />
 
       </div>

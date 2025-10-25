@@ -12,11 +12,14 @@
 
 .about p {
   text-align: justify;
-  line-height: 1.6; /* Optional: improves readability */
+  line-height: 1.6;
+  /* Optional: improves readability */
   color: gray;
-  max-width: 74vw; /* Optional: limit width for better appearance */
-  margin: 0 auto; 
-  font-size:20px;  /* Center the paragraph horizontally */
+  max-width: 74vw;
+  /* Optional: limit width for better appearance */
+  margin: 0 auto;
+  font-size: 20px;
+  /* Center the paragraph horizontally */
 }
 
 

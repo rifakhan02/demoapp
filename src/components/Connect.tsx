@@ -17,11 +17,6 @@ const Connect: React.FC = () => {
     setSending(true);
     setError(null);
 
-    console.log('Service ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
-console.log('Template ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
-console.log('Public Key:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
-
-
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
@@ -48,11 +43,18 @@ console.log('Public Key:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
   };
 
   return (
-    <section id="contact" className="connect-section">
-      <h2 className="connect-heading">Connect</h2>
+    <section
+      id="contact"
+      className="connect-section"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <h2 className="connect-heading" data-aos="fade-up" data-aos-duration="1000">
+        Connect
+      </h2>
 
       {/* Icons */}
-      <div className="connect-icons">
+      <div className="connect-icons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <a
           href="mailto:rifakhan827@gmail.com"
           target="_blank"
@@ -80,7 +82,14 @@ console.log('Public Key:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
       </div>
 
       {/* Send Message Form */}
-      <form ref={form} onSubmit={handleSend} className="connect-form">
+      <form
+        ref={form}
+        onSubmit={handleSend}
+        className="connect-form"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+      >
         <input type="text" name="user_name" placeholder="Your Name" required />
         <input type="email" name="user_email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" required rows={5} />

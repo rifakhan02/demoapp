@@ -14,18 +14,18 @@ export default function Home() {
     <div>
       <Hero />
       <hr className="border-gray-800 opacity-80 pt-4 mb-6" />
-      <About/>
+      <About />
       <hr className="border-gray-800 opacity-80 pt-4 mb-6" />
       <Education />
       <hr className="border-gray-800 opacity-80 pt-4 mb-6" />
-      <Skills/>
-      <Certificates/>
+      <Skills />
+      <Certificates />
       <hr className="border-gray-800 opacity-80 pt-4 mb-6" />
-      <Projects/>
+      <Projects />
       <hr className="border-gray-800 opacity-80 pt-4 mb-6" />
-      <Connect/>
+      <Connect />
       <hr className="border-gray-800 opacity-80 pt-4 mb-6" />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

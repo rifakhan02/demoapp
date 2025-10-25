@@ -18,10 +18,13 @@
 ---------------------------------*/
 .education-container {
   display: flex;
-  flex-direction: row;      /* horizontal on desktop */
+  flex-direction: row;
+  /* horizontal on desktop */
   justify-content: center;
-  gap: 2rem;                /* space between boxes */
-  flex-wrap: wrap;           /* wrap on smaller screens */
+  gap: 2rem;
+  /* space between boxes */
+  flex-wrap: wrap;
+  /* wrap on smaller screens */
 }
 
 /* -------------------------------
@@ -30,26 +33,32 @@
 .education-box {
   position: relative;
   width: 250px;
-  padding: 2px;                        /* outer gradient border */
+  padding: 2px;
+  /* outer gradient border */
   border-radius: 12px;
   background: linear-gradient(90deg, #656565, #7f42a7, #6600c5, #5300a0, #757575);
   background-size: 200%;
   animation: gradientAnimation 2.5s linear infinite;
   cursor: default;
   transition: transform 0.3s ease;
-  box-sizing: border-box;               /* include padding in width/height */
+  box-sizing: border-box;
+  /* include padding in width/height */
 }
 
 /* Inner Box Content */
-.education-box > div {
-  background-color: black;               /* content background */
-  border-radius: 10px;                   /* slightly smaller than outer */
+.education-box>div {
+  background-color: black;
+  /* content background */
+  border-radius: 10px;
+  /* slightly smaller than outer */
   padding: 1.5rem;
   text-align: center;
   color: #e7e7e7;
-  height: 100%;                          /* fill outer box */
+  height: 100%;
+  /* fill outer box */
   box-sizing: border-box;
-  margin: 0;                              /* remove extra margin */
+  margin: 0;
+  /* remove extra margin */
 }
 
 /* -------------------------------
@@ -94,7 +103,8 @@
 ---------------------------------*/
 @media (max-width: 768px) {
   .education-container {
-    flex-direction: column;   /* stack boxes vertically */
+    flex-direction: column;
+    /* stack boxes vertically */
     align-items: center;
     gap: 1.5rem;
   }

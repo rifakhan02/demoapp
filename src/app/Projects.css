@@ -23,7 +23,8 @@
 .project-box {
   position: relative;
   width: 300px;
-  min-height: 250px; /* taller to fit about text */
+  min-height: 250px;
+  /* taller to fit about text */
   border-radius: 15px;
   padding: 2rem 1.5rem;
   background-color: black;
@@ -57,8 +58,13 @@
 }
 
 @keyframes gradientAnimation {
-  0% { background-position: 0%; }
-  100% { background-position: 200%; }
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
 }
 
 /* Project Name */

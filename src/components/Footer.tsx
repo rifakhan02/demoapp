@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import '@/app/Footer.css'
 
@@ -29,7 +29,7 @@ const Footer = () => {
           <FaLinkedin size={28} />
         </a>
         <a href="mailto:your@email.com">
-          <MdEmail size={28} />
+          <FaTwitter size={28} />
         </a>
       </div>
     </footer>

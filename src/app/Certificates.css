@@ -12,21 +12,25 @@
 
 /* Container for box + arrows */
 .certificate-container {
-  position: relative; /* for absolute arrows */
+  position: relative;
+  /* for absolute arrows */
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 900px;
   margin: 0 auto;
-  height: 250px; /* same as box height to align arrows vertically */
+  height: 250px;
+  /* same as box height to align arrows vertically */
 }
 
 /* Certificate box */
 .certificate-box {
   position: relative;
   z-index: 1;
-  width: 420px;       /* fixed width */
-  height: 250px;      /* fixed height */
+  width: 420px;
+  /* fixed width */
+  height: 250px;
+  /* fixed height */
   border-radius: 15px;
   padding: 2rem 2.5rem;
   display: flex;
@@ -50,16 +54,15 @@
   position: absolute;
   inset: 0;
   border-radius: 15px;
-  padding: 2px; /* border thickness */
-  background: linear-gradient(
-    90deg,
-    #656565,
-    #7f42a7,
-    #6600c5,
-    #5300a0,
-    #757575,
-    #656565
-  );
+  padding: 2px;
+  /* border thickness */
+  background: linear-gradient(90deg,
+      #656565,
+      #7f42a7,
+      #6600c5,
+      #5300a0,
+      #757575,
+      #656565);
   background-size: 200%;
   animation: gradientAnimation 3s linear infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -69,8 +72,13 @@
 }
 
 @keyframes gradientAnimation {
-  0% { background-position: 0%; }
-  100% { background-position: 200%; }
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
 }
 
 /* Certificate name */
@@ -88,7 +96,8 @@
 .view-btn {
   position: relative;
   padding: 0.6rem 1.6rem;
-  background-color: black; /* inner color */
+  background-color: black;
+  /* inner color */
   color: #fff;
   font-weight: 600;
   border: none;
@@ -104,30 +113,31 @@
   content: '';
   position: absolute;
   inset: 0;
-  padding: 2px; /* border thickness */
+  padding: 2px;
+  /* border thickness */
   border-radius: 25px;
-  background: linear-gradient(
-    90deg,
-    #656565,
-    #7f42a7,
-    #6600c5,
-    #5300a0,
-    #757575,
-    #656565
-  );
+  background: linear-gradient(90deg,
+      #656565,
+      #7f42a7,
+      #6600c5,
+      #5300a0,
+      #757575,
+      #656565);
   background-size: 200%;
   animation: gradientAnimation 3s linear infinite;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: destination-out;
   mask-composite: exclude;
   pointer-events: none;
-  z-index: -1; /* behind button text */
+  z-index: -1;
+  /* behind button text */
 }
 
 .view-btn:hover {
   color: black;
   transform: scale(1.05);
-  background-color: #d0a9ff; /* optional inner color change */
+  background-color: #d0a9ff;
+  /* optional inner color change */
 }
 
 /* Arrow buttons */
@@ -165,8 +175,10 @@
 /* Responsive for mobile */
 @media (max-width: 768px) {
   .certificate-container {
-    height: 220px; /* adjust container height for smaller box */
-    flex-direction: row; /* keep arrows left/right */
+    height: 220px;
+    /* adjust container height for smaller box */
+    flex-direction: row;
+    /* keep arrows left/right */
   }
 
   .certificate-box {

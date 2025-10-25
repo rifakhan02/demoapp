@@ -44,8 +44,13 @@
 
 /* Gradient animation */
 @keyframes gradientAnimation {
-  0% { background-position: 0%; }
-  100% { background-position: 200%; }
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
 }
 
 /* Form */
@@ -79,8 +84,8 @@
   font-weight: 600;
   border-radius: 25px;
   border: 2px solid transparent;
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(90deg, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565) border-box;
+  background: linear-gradient(black, black) padding-box,
+    linear-gradient(90deg, #656565, #7f42a7, #6600c5, #5300a0, #757575, #656565) border-box;
   cursor: pointer;
   color: #fff;
   font-size: 1rem;
@@ -89,8 +94,8 @@
 
 .send-btn:hover {
   transform: scale(1.05);
-  background: linear-gradient(black, black) padding-box, 
-              linear-gradient(90deg, #757575, #5300a0, #6600c5, #7f42a7, #656565, #757575) border-box;
+  background: linear-gradient(black, black) padding-box,
+    linear-gradient(90deg, #757575, #5300a0, #6600c5, #7f42a7, #656565, #757575) border-box;
 }
 
 .success-msg {

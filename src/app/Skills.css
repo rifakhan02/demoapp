@@ -7,12 +7,8 @@
 
 .skills-heading {
   font-size: 2.5rem;
-  
   margin-bottom: 3rem;
-  
 }
-
-
 
 /* List container */
 .skills-list {
@@ -36,7 +32,6 @@
 }
 
 .skills-row h3 {
- 
   font-size: 1.2rem;
   font-weight: 450;
   min-width: 220px;
@@ -51,12 +46,71 @@
   justify-content: flex-start;
   align-items: center;
   flex-grow: 1;
-  margin-left: 15rem; /* Added for desktop gap */
+  margin-left: 15rem;
+  /* desktop gap */
+}
+
+/* Individual icons wrapper for tooltip */
+.icon-wrapper {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  /* remove focus outline */
+}
+
+/* Tooltip text */
+.icon-wrapper .tooltip {
+  visibility: hidden;
+  width: max-content;
+  background-color: #1f1f1f;
+  /* dark theme */
+  color: #e7e7e7;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  position: absolute;
+  bottom: 120%;
+  /* above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Tooltip arrow */
+.icon-wrapper .tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  /* bottom of tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1f1f1f transparent transparent transparent;
+}
+
+/* Show tooltip on hover (desktop) */
+.icon-wrapper:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Show tooltip on tap/focus (mobile) */
+.icon-wrapper:focus .tooltip,
+.icon-wrapper:active .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
 
 /* Individual icons */
 .icons svg {
-  font-size: 2.3rem; /* larger icons */
+  font-size: 2.3rem;
+  /* larger icons */
   transition: transform 0.3s ease, color 0.3s ease;
   color: #d0a9ff;
   cursor: pointer;
@@ -73,7 +127,8 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .skills-list{
+
+  .skills-list {
     align-items: center;
   }
 
@@ -83,6 +138,7 @@
 
   .icons {
     justify-content: flex-start;
-    margin-left: 0; /* reset for mobile */
+    margin-left: 0;
+    /* reset for mobile */
   }
 }

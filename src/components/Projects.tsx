@@ -16,45 +16,57 @@ const projects: Project[] = [
     name: 'URL Shortner',
     about: 'A tool to shorten long URLs quickly and easily.',
     techStack: [<FaJsSquare key="js" />, <FaReact key="react" />, <SiTailwindcss key="tailwind" />, <SiNextdotjs key="next" />],
-    demoLink: '#',
+    demoLink: '/yetToMake',
   },
   {
     name: 'Resume Analyser',
     about: 'Analyzes resumes to extract key skills and experiences.',
     techStack: [<FaReact key="react" />, <SiTypescript key="ts" />, <SiVite key="vite" />, <SiTailwindcss key="tailwind" />],
-    demoLink: '#',
+    demoLink: 'https://gethireready.vercel.app',
   },
   {
     name: 'Todo List',
     about: 'Manage your daily tasks efficiently.',
     techStack: [<SiTailwindcss key="tailwind" />, <FaJsSquare key="js" />, <FaReact key="react" />],
-    demoLink: '#',
+    demoLink: 'https://todo-list-rifakhan.vercel.app/',
   },
   {
     name: 'Sudoku Solver',
     about: 'Solve Sudoku puzzles instantly with this tool.',
     techStack: [<FaHtml5 key="html" />, <FaCss3Alt key="css" />, <FaJsSquare key="js" />],
-    demoLink: '#',
+    demoLink: 'https://sudoku-solver-rifakhan.vercel.app/',
   },
   {
     name: 'AI Content Detection Tool',
     about: 'Detect AI-generated content in documents or social media.',
     techStack: [<FaPython key="python" />, <SiStreamlit key="streamlit" />, <SiGooglecolab key="colab" />],
-    demoLink: '#',
+    demoLink: '/project-demo',
   },
   {
     name: 'Netflix Clone',
     about: 'Frontend clone of Netflix to showcase movie listing UI.',
     techStack: [<FaHtml5 key="html" />, <FaCss3Alt key="css" />],
-    demoLink: '#',
+    demoLink: 'https://netflix-clone-rifakhan.vercel.app/',
   },
 ];
 
 const Projects = () => {
   return (
     <section id="projects" className="projects-section">
-      <h2 className="projects-heading">Projects</h2>
-      <div className="projects-container">
+      <h2
+        className="projects-heading"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        Projects
+      </h2>
+
+      <div
+        className="projects-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
         {projects.map((project, index) => (
           <div className="project-box" key={index}>
             <h3 className="project-name">{project.name}</h3>
@@ -64,7 +76,12 @@ const Projects = () => {
                 <span className="tech-icon" key={i}>{icon}</span>
               ))}
             </div>
-            <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="demo-btn">
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="demo-btn"
+            >
               Demo
             </a>
           </div>
