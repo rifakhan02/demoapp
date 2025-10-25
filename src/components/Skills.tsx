@@ -23,28 +23,49 @@ import {
 import { FaBrain, FaComments, FaLightbulb, FaDatabase } from 'react-icons/fa';
 
 const Skills = () => {
+  const skillsData = [
+    {
+      title: 'Programming Languages',
+      icons: [SiCplusplus, SiPython, SiJavascript, SiTypescript],
+      labels: ['C++', 'Python', 'JavaScript', 'TypeScript'],
+    },
+    {
+      title: 'Web Technologies',
+      icons: [SiHtml5, SiCss3, SiTailwindcss, SiMysql],
+      labels: ['HTML5', 'CSS3', 'Tailwind CSS', 'SQL'],
+    },
+    {
+      title: 'Frameworks & Libraries',
+      icons: [SiReact, SiNextdotjs, SiExpress],
+      labels: ['React.js', 'Next.js', 'Express.js'],
+    },
+    {
+      title: 'Developer Tools',
+      icons: [VscCode, SiFigma, SiGit, SiGithub, SiVercel, SiVite],
+      labels: ['VS Code', 'Figma', 'Git', 'GitHub', 'Vercel', 'Vite'],
+    },
+    {
+      title: 'CS Fundamentals',
+      icons: [FaBrain, FaDatabase, SiMysql, SiJavascript, SiExpress],
+      labels: ['OOPS', 'DBMS', 'SQL', 'Computer Networks', 'Operating System'],
+    },
+    {
+      title: 'Soft Skills',
+      icons: [FaComments, FaLightbulb, FaBrain],
+      labels: ['Communication', 'Problem Solving', 'Leadership'],
+    },
+  ];
+
   return (
     <section id="skills" className="skills-section">
-      <h2
-        className="skills-heading"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
+      <h2 className="skills-heading" data-aos="fade-up" data-aos-duration="1000">
         Skills
       </h2>
 
       <div className="skills-list">
-
-        {[
-          { title: 'Programming Languages', icons: [<SiCplusplus />, <SiPython />, <SiJavascript />, <SiTypescript />], labels: ['C++', 'Python', 'JavaScript', 'TypeScript'] },
-          { title: 'Web Technologies', icons: [<SiHtml5 />, <SiCss3 />, <SiTailwindcss />, <SiMysql />], labels: ['HTML5', 'CSS3', 'Tailwind CSS', 'SQL'] },
-          { title: 'Frameworks & Libraries', icons: [<SiReact />, <SiNextdotjs />, <SiExpress />], labels: ['React.js', 'Next.js', 'Express.js'] },
-          { title: 'Developer Tools', icons: [<VscCode />, <SiFigma />, <SiGit />, <SiGithub />, <SiVercel />, <SiVite />], labels: ['VS Code', 'Figma', 'Git', 'GitHub', 'Vercel', 'Vite'] },
-          { title: 'CS Fundamentals', icons: [<FaBrain />, <FaDatabase />, <SiMysql />, <SiJavascript />, <SiExpress />], labels: ['OOPS', 'DBMS', 'SQL', 'Computer Networks', 'Operating System'] },
-          { title: 'Soft Skills', icons: [<FaComments />, <FaLightbulb />, <FaBrain />], labels: ['Communication', 'Problem Solving', 'Leadership'] },
-        ].map((row, index) => (
+        {skillsData.map((row, index) => (
           <div
-            key={index}
+            key={row.title} // unique key for each row
             className="skills-row"
             data-aos="fade-up"
             data-aos-duration="1000"
@@ -52,16 +73,15 @@ const Skills = () => {
           >
             <h3>{row.title}</h3>
             <div className="icons">
-              {row.icons.map((icon, i) => (
-                <div key={i} className="icon-wrapper" tabIndex={0}>
-                  {icon}
+              {row.icons.map((Icon, i) => (
+                <div key={row.labels[i]} className="icon-wrapper" tabIndex={0}>
+                  <Icon />
                   <span className="tooltip">{row.labels[i]}</span>
                 </div>
               ))}
             </div>
           </div>
         ))}
-
       </div>
     </section>
   );
