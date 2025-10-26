@@ -59,6 +59,7 @@ header {
     align-items: center;
     padding: 1rem 5rem;
     z-index: 999;
+    position:relative;
 }
 
 header h1 {
@@ -302,6 +303,7 @@ main {
         padding: 0.6rem 1.5rem;
     }
 
+
     .content {
         margin-top: 25rem;
 
@@ -367,6 +369,8 @@ main {
         position: relative;
         top: -500px;
     }
+
+  
 }
 
 @media (max-width: 480px) {
@@ -459,19 +463,5 @@ main {
     .container {
         height: 100vh;
         /* Keep default height for large desktops */
-    }
-}
-
-/* handle scroll*/
-@media (max-width: 768px) {
-
-    html,
-    body {
-        overflow-y: auto !important;
-    }
-
-    .container {
-        overflow: visible !important;
-        height: auto !important;
     }
 }
